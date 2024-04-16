@@ -15,13 +15,19 @@ export default {
     <ol>
         <li><span>Titolo: </span>{{ title }}</li>
         <li><span>Titolo originale: </span>{{ originalTitle }}</li>
-        <li><span>Lingua originale: </span>{{ originalLanguage }}</li>
+        <li><span>Lingua originale: </span><img :src="`../public/flags/${originalLanguage}.png`" alt=""></li>
         <li><span>Punteggio: </span>{{ voteAverage }}</li>
     </ol>
+
+    
 </template>
 
 <style>
 span{
     color: red;
+}
+img{
+    max-width: 18px;
+    object-fit: cover;
 }
 </style>
