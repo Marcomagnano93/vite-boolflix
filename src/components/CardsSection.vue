@@ -21,7 +21,7 @@ components: {
     <h3>i film:</h3>
     <ul>
         <li
-        v-for="(movie, i) in store.filteredMovies"
+        v-for="(movie, i) in store.filteredMovies" :key="i"
         >
             <card 
             :title="movie.title"
@@ -32,7 +32,7 @@ components: {
             />
         </li>
         <li
-        v-for="(tv, i) in store.filteredTv"
+        v-for="(tv, i) in store.filteredTv" :key="i"
         >
             <card 
             :name="tv.name"

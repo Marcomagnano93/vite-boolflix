@@ -16,7 +16,7 @@ export default {
 <template>
     <ol>
         <li v-if="name"><span>Titolo: </span>{{ name }}</li>
-        <li v-if="originalName"><span>Titolo: </span>{{ originalName }}</li>
+        <li v-if="originalName"><span>Titolo originale: </span>{{ originalName }}</li>
         <li v-if="title"><span>Titolo: </span>{{ title }}</li>
         <li v-if="originalTitle"><span>Titolo originale: </span>{{ originalTitle }}</li>
         <li><span>Lingua originale: </span><img :src="`../public/flags/${originalLanguage}.png`" alt=""></li>
