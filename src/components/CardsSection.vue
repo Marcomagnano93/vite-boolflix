@@ -28,6 +28,18 @@ components: {
             :originalTitle="movie.original_title"
             :originalLanguage="movie.original_language"
             :voteAverage="movie.vote_average"
+
+            />
+        </li>
+        <li
+        v-for="(tv, i) in store.filteredTv"
+        >
+            <card 
+            :name="tv.name"
+            :originalName="tv.original_name"
+            :originalLanguage="tv.original_language"
+            :voteAverage="tv.vote_average"
+
             />
         </li>
     </ul>
