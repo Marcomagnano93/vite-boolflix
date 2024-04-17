@@ -28,6 +28,7 @@ components: {
             :originalTitle="movie.original_title"
             :originalLanguage="movie.original_language"
             :voteAverage="movie.vote_average"
+            :backDrop="movie.backdrop_path"
 
             />
         </li>
@@ -39,6 +40,7 @@ components: {
             :originalTitle="tv.original_name"
             :originalLanguage="tv.original_language"
             :voteAverage="tv.vote_average"
+            :backDrop="tv.poster_path"
 
             />
         </li>

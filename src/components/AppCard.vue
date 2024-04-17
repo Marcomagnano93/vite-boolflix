@@ -5,6 +5,13 @@ export default {
        originalTitle: String,
        originalLanguage: String,
        voteAverage: Number,
+       backDrop: String
+    },
+    methods: {
+        mathRound(n){
+            let roundedN = Math.round(n) / 2;
+            return roundedN.toFixed(0)
+        }
     }
 
 }
@@ -16,7 +23,8 @@ export default {
         <li><span>Titolo: </span>{{ title }}</li>
         <li><span>Titolo originale: </span>{{ originalTitle }}</li>
         <li><span>Lingua originale: </span><img :src="`../public/flags/${originalLanguage}.png`" alt=""></li>
-        <li><span>Punteggio: </span>{{ voteAverage }}</li>
+        <li><span>Punteggio: </span>{{ mathRound(voteAverage) }}</li>
+        <li><img :src="`https://image.tmdb.org/t/p/w342${backDrop}`" alt=""></li>
     </ol>
 
     
@@ -34,5 +42,9 @@ img{
 ol{
     margin-bottom: 20px;
     border-bottom: 2px solid black;
+}
+img {
+    width: 80px;
+    object-fit: cover;
 }
 </style>

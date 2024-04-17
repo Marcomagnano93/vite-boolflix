@@ -21,6 +21,7 @@ methods: {
     axios.get(`https://api.themoviedb.org/3/search/tv?api_key=48511f7dd11f8a5f8b87b3ac0839794f&query=${search}`).then((restv) => {
 
       store.filteredTv = restv.data.results
+      console.log(restv.data.results)
     })  
   }
 }
