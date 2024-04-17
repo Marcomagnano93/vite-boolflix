@@ -1,0 +1,55 @@
+.navbar {
+    width: 100wv;
+    background-color: rgb(12, 12, 24);
+    color: white;
+    padding: 40px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchbar-box{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.searchbar {
+    width: 70%;
+    line-height: 24px;
+    border-radius: 12px;
+    padding: 4px 16px;
+    border: none;
+    font-size: 18px;
+}
+
+.searchbar::placeholder{
+    padding: 4px 8px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.search-btn{
+    padding: 4px 8px;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 999px;
+    color: white;
+    background-color: gray;
+    border: none;
+}
+
+.search-btn:hover{
+    background-color: darkgray;
+}
+
+.app-logo{
+    font-size: 60px;
+    color: rgb(220, 0, 0);
+}
+

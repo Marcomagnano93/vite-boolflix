@@ -18,33 +18,36 @@ components: {
 </script>
 
 <template>
-    <h3>i film:</h3>
-    <ul>
-        <li
-        v-for="(movie, i) in store.filteredMovies" :key="i"
-        >
-            <AppCard 
-            :title="movie.title"
-            :originalTitle="movie.original_title"
-            :originalLanguage="movie.original_language"
-            :voteAverage="movie.vote_average"
-            :backDrop="movie.backdrop_path"
+    <div class="container">
+            <ul class="row cards-wrapper py-24">
+                <li  class="col-3 p-12"
+                v-for="(movie, i) in store.filteredMovies" :key="i"
+                
+                >
+                    <AppCard 
+                    :title="movie.title"
+                    :originalTitle="movie.original_title"
+                    :originalLanguage="movie.original_language"
+                    :voteAverage="movie.vote_average"
+                    :backDrop="movie.backdrop_path"
 
-            />
-        </li>
-        <li
-        v-for="(tv, i) in store.filteredTv" :key="i"
-        >
-            <AppCard 
-            :title="tv.name"
-            :originalTitle="tv.original_name"
-            :originalLanguage="tv.original_language"
-            :voteAverage="tv.vote_average"
-            :backDrop="tv.poster_path"
+                    />
+                </li>
+                <li  class="col-3 p-12"
+                v-for="(tv, i) in store.filteredTv" :key="i"
+                >
+                    <AppCard 
+                    :title="tv.name"
+                    :originalTitle="tv.original_name"
+                    :originalLanguage="tv.original_language"
+                    :voteAverage="tv.vote_average"
+                    :backDrop="tv.poster_path"
 
-            />
-        </li>
-    </ul>
+                    />
+                </li>
+            </ul>
+    </div>
+    
 </template>
 
 <style>

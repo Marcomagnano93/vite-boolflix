@@ -29,13 +29,25 @@ methods: {
 </script>
 
 <template>
+<nav class="navbar">
+  <div class="nav-wrapper">
+    <div class="app-logo">
+      <h1>Boolflix</h1>
+    </div>
 
-    <input type="text" v-model="userSearch" @keyup.enter="fetchData(userSearch)">
+    <div class="searchbar-box">
+      <input type="text" placeholder="Cerca un film una serie TV..."
+         v-model="userSearch" 
+         @keyup.enter="fetchData(userSearch)" 
+         class="searchbar">
+
+         <button @click="fetchData(userSearch)" class="search-btn">Cerca</button>
+    </div>
     
-    <button @click="fetchData(userSearch)"
-    >
-        Cerca
-    </button>
+  
+  </div>
+</nav>
+
 
 
 </template>

@@ -1,8 +1,33 @@
 .container {
-    max-width: 900px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
 .wrapper {
     display: flex;
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-3 {
+    width: calc(3 * 100% / 12);
+  }
+
+  .col-4 {
+    width: calc(4 * 100% / 12);
+  }
+
+  .col-6 {
+    width: calc(6 * 100% / 12);
+  }
+
+  .col-8 {
+    width: calc(8 * 100% / 12);
+  }
+  
+  .col-100 {
+    width: 100%;
+  }

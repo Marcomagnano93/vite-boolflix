@@ -31,39 +31,43 @@ export default {
 </script>
 
 <template>
-    <ol>
-        <li><span>Titolo: </span>{{ title }}</li>
-        <li><span>Titolo originale: </span>{{ originalTitle }}</li>
-        <li><span>Lingua originale: </span><img :src="`../public/flags/${originalLanguage}.png`" alt="" class="flags"></li>
-        <li><span>Punteggio: </span>{{ mathRound(voteAverage) }}</li>
-        <li>
+    
+    <div class="card">
+        <div class="poster"><img :src="`https://image.tmdb.org/t/p/w342${backDrop}`" alt="" ></div>
+        
+        <div class="title"><span>Titolo: </span> <h4>{{ title }}</h4></div>
+        <div class="original-title"><span>Titolo originale: </span> <h4>{{ originalTitle }}</h4></div>
+        <div class="language"><span>Lingua originale: </span><img :src="`../public/flags/${originalLanguage}.png`" alt="" class="flags"></div>
+        <div class="stars">
             <font-awesome-icon icon="fa-solid fa-star"
             v-for="(star, i) in stars" :key="i"/>
+
             <font-awesome-icon icon="fa-regular fa-star"
-            v-for="(emptyStar, i) in emptyStars" :key="i" />
-        </li>
-        <li><img :src="`https://image.tmdb.org/t/p/w342${backDrop}`" alt=""></li>
-    </ol>
+            v-for="(emptyStar, i) in emptyStars" :key="i" />       
+        </div>
+        
+        
+    </div>
 
     
 </template>
 
 <style scoped>
-/* debug */
-span{
-    color: blue;
-}
 
-.flags {
-    max-width: 18px;
-}
+
+/* debug */
+/* span{
+    color: blue;
+} */
+
+
 
 ol{
     margin-bottom: 20px;
     border-bottom: 2px solid black;
 }
-img {
+/* img {
     width: 80px;
     object-fit: cover;
-}
+} */
 </style>

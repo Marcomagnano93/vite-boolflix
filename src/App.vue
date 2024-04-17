@@ -16,22 +16,22 @@ export default{
 </script>
 
 <template>
-  <div class="container">
-
-    <div class="red">
-      <h1>Cerca un film</h1>
-      
-    </div>
-
+  <header>
     <SearchBar/>
+  </header>
 
+  <main>
     <CardsSection/>
+  </main>
+
     
-  </div>
-
-
+    
 </template>
 
 <style>
-
+main {
+  width: 100%;
+  height: 100%;
+  background-color: lightslategray;
+}
 </style>
