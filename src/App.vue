@@ -20,6 +20,7 @@ export default{
 
     <div class="red">
       <h1>Cerca un film</h1>
+      
     </div>
 
     <SearchBar/>

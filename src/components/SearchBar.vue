@@ -14,22 +14,14 @@ data() {
 methods: {
   fetchData(search){
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=48511f7dd11f8a5f8b87b3ac0839794f&query=${search}`).then((res) => {
-      // console.log(res);
-      // console.log(res.data);
-        
+ 
       store.filteredMovies = res.data.results
-    //   console.log(store.filteredMovies)
-
+    
     })
     axios.get(`https://api.themoviedb.org/3/search/tv?api_key=48511f7dd11f8a5f8b87b3ac0839794f&query=${search}`).then((restv) => {
-      // console.log(res);
-      // console.log(res.data);
 
       store.filteredTv = restv.data.results
-    //   console.log(store.filteredMovies)
-
-    })
-  
+    })  
   }
 }
 }
