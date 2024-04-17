@@ -1,6 +1,6 @@
 <script>
 import {store} from '../store.js';
-import Card from './Card.vue'
+import AppCard from './AppCard.vue'
 
 export default{
 
@@ -11,7 +11,7 @@ data() {
       }
     },
 components: {
-    Card,
+    AppCard,
 
     }
 }
@@ -23,7 +23,7 @@ components: {
         <li
         v-for="(movie, i) in store.filteredMovies" :key="i"
         >
-            <card 
+            <AppCard 
             :title="movie.title"
             :originalTitle="movie.original_title"
             :originalLanguage="movie.original_language"
@@ -34,9 +34,9 @@ components: {
         <li
         v-for="(tv, i) in store.filteredTv" :key="i"
         >
-            <card 
-            :name="tv.name"
-            :originalName="tv.original_name"
+            <AppCard 
+            :title="tv.name"
+            :originalTitle="tv.original_name"
             :originalLanguage="tv.original_language"
             :voteAverage="tv.vote_average"
 

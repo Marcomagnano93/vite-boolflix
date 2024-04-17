@@ -38,6 +38,7 @@ methods: {
 <template>
 
     <input type="text" v-model="userSearch" @keyup.enter="fetchData(userSearch)">
+    
     <button @click="fetchData(userSearch)"
     >
         Cerca
