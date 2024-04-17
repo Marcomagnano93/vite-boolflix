@@ -7,10 +7,22 @@ export default {
        voteAverage: Number,
        backDrop: String
     },
+    data() {
+  return {
+      stars: this.mathRound(this.voteAverage),
+      emptyStars: this.restStarCalculator(this.voteAverage),
+
+      }
+    },
     methods: {
         mathRound(n){
-            let roundedN = Math.round(n) / 2;
-            return roundedN.toFixed(0)
+            let nd2 = n / 2;
+            let roundedN = Math.round(nd2);
+            return roundedN
+        },
+        restStarCalculator(n){
+            const rest = 5 - this.mathRound(n);
+            return rest
         }
     }
 
@@ -22,8 +34,14 @@ export default {
     <ol>
         <li><span>Titolo: </span>{{ title }}</li>
         <li><span>Titolo originale: </span>{{ originalTitle }}</li>
-        <li><span>Lingua originale: </span><img :src="`../public/flags/${originalLanguage}.png`" alt=""></li>
+        <li><span>Lingua originale: </span><img :src="`../public/flags/${originalLanguage}.png`" alt="" class="flags"></li>
         <li><span>Punteggio: </span>{{ mathRound(voteAverage) }}</li>
+        <li>
+            <font-awesome-icon icon="fa-solid fa-star"
+            v-for="(star, i) in stars" :key="i"/>
+            <font-awesome-icon icon="fa-regular fa-star"
+            v-for="(emptyStar, i) in emptyStars" :key="i" />
+        </li>
         <li><img :src="`https://image.tmdb.org/t/p/w342${backDrop}`" alt=""></li>
     </ol>
 
@@ -35,10 +53,11 @@ export default {
 span{
     color: blue;
 }
-img{
+
+.flags {
     max-width: 18px;
-    object-fit: cover;
 }
+
 ol{
     margin-bottom: 20px;
     border-bottom: 2px solid black;
