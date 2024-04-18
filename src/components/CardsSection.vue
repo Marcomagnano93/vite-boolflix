@@ -20,6 +20,10 @@ components: {
 
 <template>
     <div class="container">
+        <div v-if="store.filteredMovies.length === 0 && store.filteredTv.length === 0" class="intro">
+            <h1>Benvenuto!</h1>
+            <p>Cerca un film nel catalogo...</p>
+        </div>
             <ul class="row cards-wrapper py-24">
                 <li  class="col-3 p-6"
                 v-for="(movie, i) in store.filteredMovies" :key="i"   
@@ -52,6 +56,22 @@ components: {
     
 </template>
 
-<style>
+<style scoped>
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+    color: white;
+}
 
+.intro p {
+    font-size: 32px;
+}
+
+.intro h1{
+    font-size: 50px;
+}
 </style>
