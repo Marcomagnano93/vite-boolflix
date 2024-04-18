@@ -31,7 +31,7 @@ export default{
 <style>
 main {
   width: 100%;
-  height: 100%;
-  background-color: lightslategray;
+  min-height: 100vh;
+  background-color: rgb(34, 40, 47);
 }
 </style>
