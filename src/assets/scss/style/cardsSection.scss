@@ -40,6 +40,7 @@ h4 {
 
 .card span {
     font-weight: 600;
+    font-size: 16px;
 }
 
 .poster {
@@ -59,21 +60,30 @@ h4 {
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    text-overflow: ellipsis;
+    // font-size: 12px;
 
 }
 
 .stars{
     color: gold;
+    font-size: 24px;
+    display: flex;
+    gap: 4px;
+}
+
+.description {
+    width: 100%; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
 }
 
 .language{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    gap: 8px;
 }
 
 .flags {
-    max-width: 18px;
+    max-width: 24px;
 }

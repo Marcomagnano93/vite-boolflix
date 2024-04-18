@@ -35,6 +35,15 @@ methods: {
       <h1>Boolflix</h1>
     </div>
 
+    <div>
+      <ul class="wrapper gap-12">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">TV series</a></li>
+        <li><a href="#">Home</a></li>
+      </ul>
+    </div>
+
     <div class="searchbar-box">
       <input type="text" placeholder="Cerca un film una serie TV..."
          v-model="userSearch" 
@@ -52,6 +61,12 @@ methods: {
 
 </template>
 
-<style>
-
+<style scoped>
+ul{
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
 </style>
