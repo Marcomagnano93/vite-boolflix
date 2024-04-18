@@ -47,7 +47,7 @@ export default {
             <img :src="`https://image.tmdb.org/t/p/w342${backDrop}`" alt="" >
         </div>
 
-        <div class="card-body">
+        <div class="card-body" :class="backDrop === null ? 'no-img' : ''">
             <div class="title"><span>Titolo: </span> <h4>{{ title }}</h4></div>
             <div class="original-title"><span>Titolo originale: </span> <h4>{{ originalTitle }}</h4></div>
             <div class="description"><span>Trama: </span><p>{{ description }}</p></div>
