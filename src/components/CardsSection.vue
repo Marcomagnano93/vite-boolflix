@@ -15,6 +15,7 @@ components: {
 
     }
 }
+
 </script>
 
 <template>
@@ -30,6 +31,7 @@ components: {
                     :voteAverage="movie.vote_average"
                     :backDrop="movie.backdrop_path"
                     :description="movie.overview"
+                    :idNumber="movie.id"
                     />
                 </li>
                 <li  class="col-3 p-12"
@@ -42,6 +44,7 @@ components: {
                     :voteAverage="tv.vote_average"
                     :backDrop="tv.poster_path"
                     :description="tv.overview"
+                    :idNumber="tv.id"
                     />
                 </li>
             </ul>

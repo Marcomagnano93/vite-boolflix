@@ -32,8 +32,9 @@ h4 {
 }
 
 .card-body:hover {
-    opacity: 1;
+    opacity: 0.8;
     background-color: black;
+    border: 1px solid white;
 }
 
 
@@ -57,10 +58,9 @@ h4 {
 .title, .original-title {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
     gap: 12px;
-    // font-size: 12px;
+
 
 }
 
@@ -76,6 +76,7 @@ h4 {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 14px;
+    font-weight: 100;
 }
 
 .language{
@@ -86,4 +87,11 @@ h4 {
 
 .flags {
     max-width: 24px;
+}
+
+.actors {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 12px;
 }
