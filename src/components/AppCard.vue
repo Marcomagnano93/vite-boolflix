@@ -16,6 +16,7 @@ export default {
       stars: this.mathRound(this.voteAverage),
       emptyStars: this.restStarCalculator(this.voteAverage),
       actorsArray: [],
+      genresArray: []
 
       }
     },
@@ -42,13 +43,21 @@ export default {
             
             })
         },
+        fetchGenre(movieId){
+            axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=48511f7dd11f8a5f8b87b3ac0839794f`).then((res) => {
+        
+            this.genresArray = res.data.genres;
+            
+            })
     }
 }
+}
+
 </script>
 
 <template>
         <!-- card poster -->
-    <div class="card" v-on="fetchActors(idNumber)">
+    <div class="card" @mouseover="fetchActors(idNumber)">
         <div class="poster">
             <img :src="`https://image.tmdb.org/t/p/w500${backDrop}`" alt="" >
         </div>
@@ -60,7 +69,7 @@ export default {
         <!-- card movie /tv actors -->
             <div> <span>Attori: </span>
                 <ul class="actors" >
-                    <li v-for="(actor, i) in actorsArray">
+                    <li v-for="(actor, i) in actorsArray" :key="i">
                         {{ actor.name }}
                     </li>
                 </ul>
